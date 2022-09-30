@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+</head>
+<body>
+    <p> Principal <input type="text" id="principalField" /> </p>
+    <p> Interest Rate <input type="text" id="interestRateField" /> </p>
+    <p> Loan Length <input type="text" id="loanLengthField" /> </p>
+
+    <button id="calculateButton" onclick="calculateMortgage()">calculate Mortgage</button>
+
+    <p id="resultMonthlyPayment"></p><br>
+
+    <p id="resultTotalInterestPaid"></p>
+    
+    <script src="./Scripts/index.js"></script>
+</body>
+</html>
