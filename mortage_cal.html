@@ -17,26 +17,46 @@
     <title>Mortgage Calculator</title>
 </head>
 <body>
+    <main>
+        <header>Find out your mortage</header>
 
+        <div class="container text-center my-5 p4">
+            <div class="row">
+              <div class="col">
+                <label for="principalField">Principal</label>
+                <input type="text" id="principalField" />
+                <label for="interestRateField">Interest Rate</label>
+                <input type="text" id="interestRateField" />
+                <label for="loanLengthField">Loan Length</label>
+                <input type="text" id="loanLengthField" />
+              </div>
+              <div class="col">
+                <button id="calculateButton" onclick="calculateMortgage()">calculate Mortgage</button>
+        
+                <p id="resultMonthlyPayment"></p>
+            
+                <p id="resultTotalInterestPaid"></p>
+                </div>
+            </div>
+        <div class=container my-5 p4>
+            <label for="principalField">Principal</label>
+            <input type="text" id="principalField" />
+            <label for="interestRateField">Interest Rate</label>
+            <input type="text" id="interestRateField" />
+            <label for="loanLengthField">Loan Length</label>
+            <input type="text" id="loanLengthField" />
+            
+        
+            <button id="calculateButton" onclick="calculateMortgage()">calculate Mortgage</button>
+        
+            <p id="resultMonthlyPayment"></p>
+        
+            <p id="resultTotalInterestPaid"></p>
+        </div>
+
+
+    </main>
    
-
-
-
-
-    <label for="principalField">Principal</label>
-    <input type="text" id="principalField" />
-    <label for="interestRateField">Interest Rate</label>
-    <input type="text" id="interestRateField" />
-    <label for="loanLengthField">Loan Length</label>
-    <input type="text" id="loanLengthField" />
-    
-
-    <button id="calculateButton" onclick="calculateMortgage()">calculate Mortgage</button>
-
-    <p id="resultMonthlyPayment"></p>
-
-    <p id="resultTotalInterestPaid"></p>
-    
     <script src="./Scripts/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
