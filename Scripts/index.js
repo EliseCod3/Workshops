@@ -23,7 +23,7 @@ function calculateMortgage() {
     let monthly = principalField * percentInterest / 1 - (1  + percentInterest)**loanLengthField;
     let interest = principalField * percentInterest * loanLengthField;
     //create your message to display
-    let answerMortgage = `Your expected monthly payment is ${monthly}`;
+    answerMortgage = `Your expected monthly payment is ${monthly}`;
     let answerTotalInterest = `Your total interest paid is ${interest}`;
 
     //display message
