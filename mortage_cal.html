@@ -38,7 +38,7 @@
                       <input type="text" id="loanLengthField" />
                   </div>
                   <div class="col">
-                      <label for="compoundField">Compound:</label>
+                      <label for="compoundField">Compound (years):</label>
                       <input type="text" id="compoundField" />
                     </div>
                 </div>
@@ -49,11 +49,11 @@
                     </div>
                     <div class="col">
                         <label for="mortgageField">Mortgage: </label>
-                        <input type="text" id="mortgageField" disabled />
+                        <input type="text" id="mortgageField" onclick="calculateMortgage()" disabled />
                     </div>
                     <div class="col">
                         <label for="mortgageField">Compound Interest: </label>
-                        <input type="text" id="mortgageField" disabled />
+                        <input type="text" id="mortgageField" onclick="calculateMortgage()" disabled />
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@
 
     </main>
    
-    <script src="./Scripts/index.js"></script>
+    <script rel="" src="./Scripts/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
