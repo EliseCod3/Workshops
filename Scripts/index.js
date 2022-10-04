@@ -1,8 +1,5 @@
 "use strict"
 
-
-
-
 //query html elements on the page and put them into variables
 const principalField = document.getElementById("principalField");
 const interestRateField = document.getElementById("interestRateField");
@@ -17,12 +14,14 @@ let loanLength = Number(loanLengthField.value);
 let percentInterest = interestRate;
 
 function calculateMortgage(principal, percentInterest, loanLength) {
-    
     let monthly = (principal * percentInterest) / num1 - (num1  + percentInterest)**loanLength;
     return monthly;
 }
 
-console.log(calculateMortgage());
+console.log(calculateMortgage(principal, percentInterest,loanLength));
 
-let interest = principal * percentInterest * loanLength;
+function calulateTotalInterest(params) {
+    let interest = principal * percentInterest * loanLength;
+    return 
+}
 console.log(principal * percentInterest * loanLength);
