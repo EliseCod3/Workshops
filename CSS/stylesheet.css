@@ -1,4 +1,15 @@
 header {
     padding-bottom: 20px;
-    justify-content: center;
+    background-color: khaki;
+    text-align: center;
+    
+}
+
+#input {
+    margin-bottom: 80px;
+    margin-top: 65px;
+    padding: 40px, 15px, 40px, 15px;
+}
+#output {
+    text-align: center;
 }

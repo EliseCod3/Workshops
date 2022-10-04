@@ -14,45 +14,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
     <title>Mortgage Calculator</title>
 </head>
 <body>
     <main>
-        <header>Find out your mortage</header>
 
-        <div class="container text-center my-5 p4">
-            <div class="row">
-              <div class="col">
-                <label for="principalField">Principal</label>
-                <input type="text" id="principalField" />
-                <label for="interestRateField">Interest Rate</label>
-                <input type="text" id="interestRateField" />
-                <label for="loanLengthField">Loan Length</label>
-                <input type="text" id="loanLengthField" />
-              </div>
-              <div class="col">
-                <button id="calculateButton" onclick="calculateMortgage()">calculate Mortgage</button>
-        
-                <p id="resultMonthlyPayment"></p>
-            
-                <p id="resultTotalInterestPaid"></p>
+        <header><h1>Find out your mortage</h1></header>
+
+        <div id="input" class="container-fluid text-center ">
+            <span class="border border-start border-dark">
+                <div class="row">
+                  <div class="col-3">
+                    <label for="principalField">Principal: </label>
+                    <input type="text" id="principalField" />
+                  </div>
+                  <div class="col-3">
+                      <label for="interestRateField">Annual Rate: </label>
+                      <input type="text" id="interestRateField" />
+                  </div>
+                  <div class="col-3">
+                      <label for="loanLengthField">Loan Length:</label>
+                      <input type="text" id="loanLengthField" />
+                  </div>
+                  <div class="col">
+                      <label for="compoundField">Compound:</label>
+                      <input type="text" id="compoundField" />
+                    </div>
                 </div>
-            </div>
+                </div>
+                <div id="output" class="row"> 
+                    <div class="col">
+                        <button id="calculateButton" class="btn btn-dark" onclick="calculateMortgage()">calculate Mortgage</button>
+                    </div>
+                    <div class="col">
+                        <label for="mortgageField"></label>
+                        <input type="text" id="mortgageField" disabled />
+                    </div>
+                    <div class="col">
+                        <label for="mortgageField"></label>
+                        <input type="text" id="mortgageField" disabled />
+                    </div>
+                </div>
+
+            </span>
+
+
             
-        <div class=container my-5 p4>
-            <label for="principalField">Principal</label>
-            <input type="text" id="principalField" />
-            <label for="interestRateField">Interest Rate</label>
-            <input type="text" id="interestRateField" />
-            <label for="loanLengthField">Loan Length</label>
-            <input type="text" id="loanLengthField" />
-            
-        
-            <button id="calculateButton" onclick="calculateMortgage()">calculate Mortgage</button>
-        
-            <p id="resultMonthlyPayment"></p>
-        
-            <p id="resultTotalInterestPaid"></p>
         </div>
 
 
