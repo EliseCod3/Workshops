@@ -20,10 +20,10 @@
 <body>
     <main>
 
-        <header><h1>Find out your mortage</h1></header>
+        <header><h1>Find out your Compound Interest</h1></header>
 
         <div id="input" class="container-fluid text-center ">
-            <span class="border border-start border-dark">
+            
                 <div class="row">
                   <div class="col-3">
                     <label for="principalField">Principal: </label>
@@ -34,36 +34,56 @@
                       <input type="text" id="interestRateField" />
                   </div>
                   <div class="col-3">
-                      <label for="loanLengthField">Loan Length:</label>
+                      <label for="loanLengthField">Loan Length (months):</label>
                       <input type="text" id="loanLengthField" />
                   </div>
-                  <div class="col">
-                      <label for="compoundField">Compound (years):</label>
-                      <input type="text" id="compoundField" />
-                    </div>
-                </div>
-                </div>
-                <div id="output" class="row"> 
-                    <div class="col">
-                        <button id="calculateButton" class="btn btn-dark" onclick="calculateMortgage()">calculate Mortgage</button>
-                    </div>
-                    <div class="col">
-                        <label for="mortgageField">Mortgage: </label>
-                        <input type="text" id="mortgageField" onclick="calculateMortgage()" disabled />
-                    </div>
-                    <div class="col">
-                        <label for="mortgageField">Compound Interest: </label>
-                        <input type="text" id="mortgageField" onclick="calculateMortgage()" disabled />
-                    </div>
                 </div>
 
-            </span>
-
-
+                <button id="calcuButton" class="btn btn-dark" onclick="calculateMortgage()">Calculate</button>
+                
+                <table>
+                  <tr>
+                      <th>Monthyly Payment</th>
+                      <td id="resultMonthlyPayment"></td>
+                  </tr>
+                  <tr>
+                      <th>Total Interest paid</th>
+                      <td id="resultTotalInterestPaid"></td>
+                  </tr>
+                </table>
             
         </div>
 
+        <div class="container-fluid text-center">
+            <div id="output" class="row"> 
+                <div class="col">
+                    <label for="mortgageField">Mortgage: </label>
+                    <input type="text" id="mortgageField" disabled />
+                </div>
+                <div class="col">
+                    <label for="mortgageField">Compound Interest: </label>
+                    <input type="text" id="mortgageField" disabled />
+                </div>
+            </div>
+            <div>
+                <button id="calculateButton" class="btn btn-dark" onclick="calulateCompoundInterest();">Calculate</button>
+            </div>
 
+            <table>
+                <tr>
+                    <th>Future Value</th>
+                    <td id="mortgageOutput"></td>
+                </tr>
+                <tr>
+                    <th>Total Interest Earned</th>
+                    <td id="resultTotalInterestPaid"></td>
+                </tr>
+              </table>
+            
+        </div>
+                
+    
+            
     </main>
    
     <script rel="" src="./Scripts/index.js"></script>

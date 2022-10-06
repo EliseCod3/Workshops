@@ -1,31 +1,38 @@
 "use strict"
+window.onload
 
-//query html elements on the page and put them into variables
-const principalField = document.getElementById("principalField");
-const interestRateField = document.getElementById("interestRateField");
-const loanLengthField = document.getElementById("loanLengthField");
-const resultMonthlyPayment = document.getElementById("resultMonthlyPayment");
-const resultTotalInterestPaid = document.getElementById("resultTotalInterestPaid");
-const compoundRate = document.getElementById("compoundField");
-const mortgageOutput = document.getElementById("mortgageField");
-const num1 = 1;
+function calculateMortgage() {
+    
+    //query html elements on the page and put them into variables
+    const principalField = document.getElementById("principalField");
+    const interestRateField = document.getElementById("interestRateField");
+    const loanLengthField = document.getElementById("loanLengthField");
+    const resultMonthlyPayment = document.getElementById("resultMonthlyPayment");
+    const resultTotalInterestPaid = document.getElementById("resultTotalInterestPaid");
 
-let principal = Number(principalField.value);
-let interestRate = Number(interestRateField.value);
-let loanLength = Number(loanLengthField.value);
-let percentInterest = interestRate;
-let compound = Number(compoundRate.value);
-
-function calculateMortgage(principal, percentInterest, loanLength) {
-    let monthly = Number(principal);
-    mortgageOutput.innerHTML = `Your monthly payment is ${monthly}`;
+    
+    let principal = (principalField.value);
+    let interestRate = (interestRateField.value);
+    let loanLength = (loanLengthField.value);
+    let monthly = principal / loanLength * interestRate;
+    let formulaInterest = Math.abs(Math.round((monthly * loanLength) - principal));
+    let interestTotal = Math.abs(Math.round(formulaInterest / 0.01));
+    
+    resultMonthlyPayment.innerHTML = monthly.toFixed(2);
+    resultTotalInterestPaid.innerHTML = interestTotal.toFixed(2);
 }
 
-console.log(calculateMortgage(principal, percentInterest,loanLength));
+console.log(calculateMortgage());
 
-function calulateTotalInterest(params) {
+function calulateCompoundInterest() {
+    const interestRateField = document.getElementById("interestRateField");
+    const compoundRate = document.getElementById("compoundField");
+    const mortgageOutput = document.getElementById("mortgageField");
+    
+    let interestRate = Number(interestRateField.value);
     let interest = principal * percentInterest * loanLength;
     
+    let compound = Number(compoundRate.value);
 }
 
-console.log(principal * percentInterest * loanLength);
+console.log(calulateCompoundInterest());
