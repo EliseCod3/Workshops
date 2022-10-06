@@ -20,7 +20,22 @@
 <body>
     <main>
 
-        <header><h1>Find out your Compound Interest</h1></header>
+        <header><h1>Find out your Mortgage</h1></header>
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+        </ul>
 
         <div id="input" class="container-fluid text-center ">
             
@@ -54,36 +69,6 @@
             
         </div>
 
-        <div class="container-fluid text-center">
-            <div id="output" class="row"> 
-                <div class="col">
-                    <label for="mortgageField">Mortgage: </label>
-                    <input type="text" id="mortgageField" disabled />
-                </div>
-                <div class="col">
-                    <label for="mortgageField">Compound Interest: </label>
-                    <input type="text" id="mortgageField" disabled />
-                </div>
-            </div>
-            <div>
-                <button id="calculateButton" class="btn btn-dark" onclick="calulateCompoundInterest();">Calculate</button>
-            </div>
-
-            <table>
-                <tr>
-                    <th>Future Value</th>
-                    <td id="mortgageOutput"></td>
-                </tr>
-                <tr>
-                    <th>Total Interest Earned</th>
-                    <td id="resultTotalInterestPaid"></td>
-                </tr>
-              </table>
-            
-        </div>
-                
-    
-            
     </main>
    
     <script rel="" src="./Scripts/index.js"></script>

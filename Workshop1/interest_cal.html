@@ -7,8 +7,52 @@
     <title>Interest Calculator</title>
 </head>
 <body>
-    
+    <header>Compound Your Interest</header>
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+
+    <div class="container-fluid text-center">
+        <div id="output" class="row"> 
+            <div class="col">
+                <label for="mortgageField">Mortgage: </label>
+                <input type="text" id="mortgageField" disabled />
+            </div>
+            <div class="col">
+                <label for="mortgageField">Compound Interest: </label>
+                <input type="text" id="mortgageField" disabled />
+            </div>
+        </div>
+        <div>
+            <button id="calculateButton" class="btn btn-dark" onclick="calulateCompoundInterest();">Calculate</button>
+        </div>
+
+        <table>
+            <tr>
+                <th>Future Value</th>
+                <td id="mortgageOutput"></td>
+            </tr>
+            <tr>
+                <th>Total Interest Earned</th>
+                <td id="resultTotalInterestPaid"></td>
+            </tr>
+          </table>
+        
+    </div>
 
     <script src="./Scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
