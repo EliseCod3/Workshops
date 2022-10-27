@@ -11,10 +11,10 @@ function calculateMortgage() {
     const resultTotalInterestPaid = document.getElementById("resultTotalInterestPaid");
 
     
-    let principal = (principalField.value);
-    let interestRate = (interestRateField.value);
-    let loanLength = (loanLengthField.value);
-    let monthly = principal / loanLength * interestRate;
+    let principal = principalField.value;
+    let interestRate = interestRateField.value;
+    let loanLength = loanLengthField.value;
+    let monthly = (principal / loanLength) * interestRate;
     let formulaInterest = Math.abs(Math.round((monthly * loanLength) - principal));
     let interestTotal = Math.abs(Math.round(formulaInterest / 0.01));
     
