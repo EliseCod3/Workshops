@@ -1,5 +1,6 @@
 "use strict"
-window.onload
+
+const calculateBtn = document.getElementById("calculateButton");
 
 function calculateMortgage() {
     
@@ -7,36 +8,42 @@ function calculateMortgage() {
     const principalField = document.getElementById("principalField");
     const interestRateField = document.getElementById("interestRateField");
     const loanLengthField = document.getElementById("loanLengthField");
-    const resultMonthlyPayment = document.getElementById("resultMonthlyPayment");
+    const resultMonthlyPayment = document.getElementById("monthlyPaymentOutput");
     const resultTotalInterestPaid = document.getElementById("resultTotalInterestPaid");
+    
 
     
     let principal = principalField.value;
-    let interestRate = interestRateField.value;
-    let loanLength = loanLengthField.value;
-    let monthly = (principal / loanLength) * interestRate;
-    let formulaInterest = Math.abs(Math.round((monthly * loanLength) - principal));
-    let interestTotal = Math.abs(Math.round(formulaInterest / 0.01));
+    let interestRate = parseFloat(interestRateField.value);
+    let loanLength = (loanLengthField.value)*12;
+    let interest = (principal * (interestRate * 0.01))/loanLength;
+    let monthly = ((principal/loanLength)+ interest);
+    let interestTotal = interest * loanLength;
     
     resultMonthlyPayment.innerHTML = monthly.toFixed(2);
     resultTotalInterestPaid.innerHTML = interestTotal.toFixed(2);
+    
+}
+window.onload = () => {
+    calculateBtn.onclick = calculateMortgage;
 }
 
-console.log(calculateMortgage());
 
-function calulateCompoundInterest() {
-    const loanLengthField = document.getElementById("loanLengthField");
-    const principalField = document.getElementById("principalField");
-    const interestRateField = document.getElementById("interestRateField");
-    const compoundRate = document.getElementById("compoundField");
-    const mortgageOutput = document.getElementById("mortgageField");
+// function calulateCompoundInterest() {
+//     const loanLengthField = document.getElementById("loanLengthField");
+//     const principalField = document.getElementById("principalField");
+//     const interestRateField = document.getElementById("interestRateField");
+//     // const compoundRate = document.getElementById("compoundField");
+//     const mortgageOutput = document.getElementById("mortgageField");
     
-    let loanLength = (loanLengthField.value);
-    let principal = (principalField.value);
-    let interestRate = Number(interestRateField.value);
-    let interest = principal * interestRate * loanLength;
-    
-    //let compound = Number(compoundRate.value);
-}
+//     let loanLength = (loanLengthField.value);
+//     let principal = (principalField.value);
+//     let interestRate = Number(interestRateField.value);
+//     let interest = principal * interestRate * loanLength;
 
-console.log(calulateCompoundInterest());
+    
+    
+//     //let compound = Number(compoundRate.value);
+// }
+
+// console.log(calulateCompoundInterest());

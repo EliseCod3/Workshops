@@ -27,25 +27,29 @@
     <div class="container-fluid text-center">
         <div id="output" class="row"> 
             <div class="col">
-                <label for="mortgageField">Mortgage: </label>
-                <input type="text" id="mortgageField" disabled />
+                <label for="principalField">Principal: </label>
+                <input id="principalField" />
             </div>
             <div class="col">
-                <label for="compoundField">Compound Interest: </label>
-                <input type="text" id="compoundField" disabled />
+                <label for="interestRateField">Interest Rate: </label>
+                <input id="interestRateField" />
+            </div>
+            <div class="col">
+              <label for="loanLengthField">Loan Length: </label>
+              <input id="loanLengthField">
             </div>
         </div>
         <div>
-            <button id="calculateButton" class="btn btn-dark" onclick="calulateCompoundInterest();">Calculate</button>
+            <button id="calculateButton" class="btn btn-dark">Calculate</button>
         </div>
 
         <table>
             <tr>
-                <th>Future Value</th>
-                <td id="mortgageOutput"></td>
+                <th>Expected monthly payment</th>
+                <td id="monthlyPaymentOutput"></td>
             </tr>
             <tr>
-                <th>Total Interest Earned</th>
+                <th>Total Interest Paid</th>
                 <td id="resultTotalInterestPaid"></td>
             </tr>
           </table>
