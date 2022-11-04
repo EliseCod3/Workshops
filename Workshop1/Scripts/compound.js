@@ -1,20 +1,26 @@
-window.onload = () => {
-
-}
+const calculateButton = document.getElementById("calcuButton");
 
 function calulateCompoundInterest() {
-        const loanLengthField = document.getElementById("loanLengthField");
-        const principalField = document.getElementById("principalField");
+        const LengthField = document.getElementById("LengthField");
+        const depositField = document.getElementById("depositField");
         const interestRateField = document.getElementById("interestRateField");
-        // const compoundRate = document.getElementById("compoundField");
-        const mortgageOutput = document.getElementById("mortgageField");
+        const futureValue = document.getElementById("futureValueOutput");
+        const totalInterestEarned = document.getElementById("resultTotalInterestEarned");
         
-        let loanLength = (loanLengthField.value);
-        let principal = (principalField.value);
-        let interestRate = Number(interestRateField.value);
-        let interest = principal * interestRate * loanLength;
+        let loanLength = (LengthField.value);
+        let deposit = (depositField.value);
+        let interestRate = parseFloat(interestRateField.value)* .01;
+        let n = 365;
+        let totalValue = deposit * interestRate * loanLength;
+        let totalInterest = deposit * interestRate * loanLength;
     
-        
+        futureValue.innerText = totalValue.toFixed(2);
+        totalInterestEarned.innerText = totalInterest;
+
         
         //let compound = Number(compoundRate.value);
-    }
+}
+
+window.onload = () => {
+    calculateButton.onclick = calulateCompoundInterest;
+}
