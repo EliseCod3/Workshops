@@ -58,7 +58,7 @@ function loadProductsByCategories() {
     
                 cell1.innerText = product.productId;
                 cell2.innerText = product.productName;
-                cell3.innerText = price.toFixed(2);
+                cell3.innerText = `$${price.toFixed(2)}`;
     
                 const anchor = document.createElement("a");
                 anchor.innerText = "see details";
