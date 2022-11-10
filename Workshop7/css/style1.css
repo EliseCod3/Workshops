@@ -1,0 +1,19 @@
+* {
+    text-align: center;
+}
+div {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+a {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    font-size: 2rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+a:hover {
+    text-decoration: underline;
+    background-image: ;
+
+}
