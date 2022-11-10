@@ -15,11 +15,37 @@
 
     <select id="search-type-dropdown">
         <option value="">Select one...</option>
-        <option value="category">Search by Category</option>
+        <option value="categories">Search by Category</option>
         <option value="all">View All</option>
     </select>
 
-    <select id="category-dropdown"></select>
+    <div id="category-section" style="display: none;">
+        <label for="category-dropdown">Categories</label>
+        <select id="category-dropdown">
+            <option value="">Select one...</option>
+        </select>
+    </div>
+
+
+    <div id="tbl-display-section">
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Details</th>
+
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+
+    </div>
+
+
 
     <script src="./scripts/srch_products.js"></script>
 </body>
