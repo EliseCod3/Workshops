@@ -12,8 +12,10 @@ function selectSearchType() {
     
     
     if(selectedValue == "categories") {
+        categorySection.style.display = "block";
         loadCategoryDropdown();
     }else if (selectedValue == "all") {
+        categorySection.style.display = "none";
         loadAllProductsTable();
     }
 
@@ -38,7 +40,7 @@ function loadCategoryDropdown() {
 
 function loadProductsByCategories() {
     tableDisplaySection.style.display = "block";
-    
+    productsTableBody.innerHTML = " ";
     const selectedCategory = categoryDropdown.value;
 
     fetch("http://localhost:8081/api/products")
