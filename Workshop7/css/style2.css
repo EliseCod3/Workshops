@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+}
+header {
+    margin-bottom: 2rem;
+}
+nav {
+    background-color: black;
+    padding: 0.2rem;
+}
+a {
+    margin-left: 4rem;
+}
+.container {
+    align-content: center;
+    text-align: center;
+}
+#search-type-dropdown {
+    margin-bottom: 1rem;
+}
