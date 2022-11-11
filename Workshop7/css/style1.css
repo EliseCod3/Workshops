@@ -1,10 +1,49 @@
 * {
     text-align: center;
 }
+body {
+    background-color: darkgray;
+}
 h1 {
-    display: flex;
-    justify-content:;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+a {
+    text-decoration: none;
+   
+    
+}
+a:hover {
+    color: azure;
+    border: 1rem;
 }
 h1:hover{
+    text-decoration: underline;
+    display: inline;
+    background-color: lightslategray;
+    background-size: 100%;
+    border-radius: 44%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
 
 }
+h1, img:hover {
+    display: inline;
+}
+img {
+    position: absolute;
+    top: 35%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+#second-bag {
+    margin-left: 1.2rem;
+}
+#third-bag {
+    margin-left: 2.4rem;
+}
+
