@@ -1,12 +1,10 @@
 h1 {
     text-align: center;
 }
-header {
-    margin-bottom: 2rem;
-}
+
 nav {
     background-color: black;
-    padding: 0.2rem;
+
 }
 a {
     margin-left: 4rem;
@@ -16,9 +14,18 @@ a {
     text-align: center;
 }
 #search-type-dropdown {
-    margin-bottom: 1rem;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-top: 5px;
+}
+#category-dropdown {
+    margin-top: 1rem;
 }
 table {
     border-style: solid;
     margin-top: 1.5rem;
+}
+#main-section {
+    background-color: lightslategray;
+    padding-bottom: 20rem;
 }
