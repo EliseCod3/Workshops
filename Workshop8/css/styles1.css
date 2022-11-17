@@ -12,3 +12,11 @@ table {
 #add-btn {
     margin-bottom: 1rem;
 }
+h1 {
+    text-align: center;
+}
+#update-message{
+    text-align: center;
+    font-weight: bold;
+    border-style: solid;
+}
