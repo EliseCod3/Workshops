@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <title>Add Todo</title>
+</head>
+<body>
+    <main>
+        <h1>Add Task</h1>
+
+        <form>
+            <div class="row">
+                <label for="user-select-dropdown">User</label>
+                <select name="userSelect" id="user-select-dropdown">
+                    <option value="">select user...</option>
+                </select>
+
+                <label for="category-select-dropdown">Category</label>
+                <select name="categorySelect" id="category-select-dropdown">
+                    <option value="">select category...</option>
+                </select>
+
+                <label for="priority-select-dropdown">Priority</label>
+                <select name="prioritySelect" id="priority-select-dropdown">
+                    <option value="">select priority</option>
+                </select>
+            </div>
+            <div class="row">
+                <label for="task-description">Description</label>
+                <textarea name="taskDescription" id="task-description" cols="30" rows="10"></textarea>
+
+                <label for="task-deadline">Deadline (YYYY-MM-DD)</label>
+                <input type="text" name="taskDeadline" id="task-deadline">
+            </div>
+
+            <div id="buttons">
+                <button type="submit">Save</button>
+                <button type="button" id="cancel-add">Cancel</button>
+                <p id="messageParagraph"></p>
+            </div>
+        </form>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./scripts/new.js"></script>
+</body>
+</html>
