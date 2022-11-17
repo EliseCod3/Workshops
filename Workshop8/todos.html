@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="stylesheet" href="./css/styles1.css">
     <title>Todos</title>
 </head>
 <body>
@@ -12,11 +14,14 @@
         <a href="./index.html">Home</a>
     </nav>
     <main>
-        <div>
+        <div class="row">
             <label for="user-select-dropdown">User</label>
             <select name="userSelect" id="user-select-dropdown">
                 <option value="">select user...</option>
             </select>
+            <div id="add-btn" style="text-align: right;">
+                <a id="add-task"> &plus; Add</a>
+            </div>
         </div>
         <div id="table-display">
             <table id="todo-table-display">
