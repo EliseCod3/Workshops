@@ -2,6 +2,9 @@
 
 const userSelectDropdown = document.querySelector("#user-select-dropdown");
 const tbody = document.querySelector("#todo-table-display tbody");
+const updateMessageDisplay = document.getElementById("update-message");
+const addBtnSection = document.querySelector("#add-btn");
+const tableDisplaySection = document.querySelector("#table-display");
 
 function loadUsers() {
     fetch("http://localhost:8083/api/users")
@@ -16,6 +19,10 @@ function loadUsers() {
 }
 
 function loadTodos() {
+    addBtnSection.style.display = "inline-block";
+    addBtnSection.style = "text-align: right";
+    tableDisplaySection.style.display = "inline";
+
     const userId = userSelectDropdown.value;
 
     fetch("http://localhost:8083/api/todos/byuser/" + userId)
@@ -40,11 +47,23 @@ function loadTodos() {
 }
 
 function displayMesaage() {
+    if(sessionStorage.savedMessage) {
+        updateMessageDisplay.innerText = sessionStorage.savedMessage;
+    }
+}
 
+function removeMessage() {
+    if(sessionStorage.savedMessage) {
+        updateMessageDisplay.innerText = "";
+        sessionStorage.removeItem("message");
+        sessionStorage.savedMessage = "";
+    }
 }
 
 window.onload = () => {
     loadUsers();
     userSelectDropdown.onchange = loadTodos;
-    
+    displayMesaage();
+    setTimeout(removeMessage, 5000);
+
 }

@@ -15,17 +15,26 @@
     </nav>
     <main>
         <h1>Search for Tasks</h1>
+
+        <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body">
+                <p id="update-message"></p>
+              </div>
+            </div>
+          </div>
+
         <div class="row">
             <label for="user-select-dropdown">User</label>
             <select name="userSelect" id="user-select-dropdown">
                 <option value="">select user...</option>
             </select>
-            <div id="add-btn" style="text-align: right;">
+            <div id="add-btn" style="text-align: right; display: none;">
                 <a id="add-task" href="./new-todo.html"> &plus; Add</a>
             </div>
         </div>
         
-        <div id="table-display">
+        <div id="table-display" style="display: none;">
             <table id="todo-table-display">
                 <thead>
                     <tr>
