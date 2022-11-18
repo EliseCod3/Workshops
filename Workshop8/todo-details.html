@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
     <title>Todo Details</title>
 </head>
@@ -11,10 +12,11 @@
 <body>
     <main>
         <h1>Who's Task Name</h1>
-        <h3>category</h3>
+        <h4>category</h4>
 
         <div id="task-info">
             <dl>
+                <dd><button type="button" id="mark-completed-btn">Mark Completed</button> <button id="unmark-completion" type="button">Unmark</button></dd>
                 <dt>Completed</dt>
                 <dd id="task-completed-output"></dd>
 
@@ -26,11 +28,12 @@
 
                 <dt>Description</dt>
                 <dd id="task-description-output"></dd>
-
-
             </dl>
+            <button type="button" id="back-btn">Back</button>
         </div>
     </main>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="./scripts/details.js"></script>
 </body>
 </html>
