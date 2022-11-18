@@ -38,8 +38,8 @@ function loadTodos() {
             let cell5 = row.insertCell(4);
 
             const anchor = document.createElement("a");
-            anchor.innerText = "See Details";
-            anchor.herf = `./todo-details.html?taskid=${userTasks.id}`;
+            anchor.innerText = "see details";
+            anchor.href = `./todo-details.html?taskid=${userTasks.id}`;
 
             cell4.appendChild(anchor);
             cell1.innerHTML = userTasks.completed ? "&#10003;": "&#215;";
