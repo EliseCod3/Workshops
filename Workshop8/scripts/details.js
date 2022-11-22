@@ -48,39 +48,39 @@ function markTaskAsCompleted() {
 
     const taskId = getTaskId();
 
-        const completedTask = {
-            completed: true,
-        }
+    completedOutput.value = true,
     
         fetch("http://localhost:8083/api/todos/" + taskId, {
             method: "PUT",
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(completedTask)
-        }).then(response => response.json())
+        }).then(response => response)
         .then(task => {
             console.log(task)
             completedOutput.innerHTML = task.completed ? "&#10003;": "&#215;";
-        })
+        }).catch(error => {
+            console.log(error);
+            messageParagraph.innerText = "An unexpected error occured.";
+        });
 
 }
 
 function unmarkTask() {
     const taskId = getTaskId();
 
-    const completedTask = {
-        completed: false,
-    }
+    completedOutput.value = false,
     
         fetch("http://localhost:8083/api/todos/" + taskId, {
             method: "PUT",
             headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(completedTask)
-        }).then(response => response.json())
+        }).then(response => response)
         .then(task => {
             console.log(task)
             completedOutput.innerHTML = task.completed ? "&#10003;": "&#215;";
 
-        })
+        }).catch(error => {
+            console.log(error);
+            messageParagraph.innerText = "An unexpected error occured.";
+        });
 
 }
 
