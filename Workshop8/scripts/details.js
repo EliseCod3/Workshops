@@ -50,10 +50,8 @@ function markTaskAsCompleted() {
 
     completedOutput.value = true,
     
-        fetch("http://localhost:8083/api/todos/" + taskId, {
-            method: "PUT",
-            headers: { "Content-Type": "application/json"},
-        }).then(response => response)
+        fetch("http://localhost:8083/api/todos/" + taskId)
+        .then(response => response.json())
         .then(task => {
             console.log(task)
             completedOutput.innerHTML = task.completed ? "&#10003;": "&#215;";
